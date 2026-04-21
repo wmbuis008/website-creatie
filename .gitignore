@@ -1,0 +1,16 @@
+# Besturingssysteem
+.DS_Store
+Thumbs.db
+
+# Editor-instellingen
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (indien van toepassing)
+node_modules/
+
+# Build-uitvoer
+dist/
+build/
