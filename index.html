@@ -1,32 +1,489 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Creatie</title>
+    <title>Menu — Koffie Academie Sloterdijk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Website Creatie</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Over</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+
+    <header class="site-header">
+        <p class="brand-eyebrow">Sloterdijk</p>
+        <h1 class="brand-name">Koffie Academie</h1>
+        <p class="brand-address">Kadijks 230 &middot; 1049NS Amsterdam</p>
     </header>
 
-    <main>
-        <section class="hero">
-            <h2>Welkom</h2>
-            <p>Dit is het startpunt van ons websiteproject.</p>
+    <nav class="tab-nav" id="tabNav">
+        <div class="tabs-wrapper">
+            <button class="tab-btn active" data-tab="dinner">Dinner</button>
+            <button class="tab-btn" data-tab="borrel">Borrel Bites</button>
+            <button class="tab-btn" data-tab="extras">Extras</button>
+            <button class="tab-btn" data-tab="cocktails">Cocktails</button>
+            <button class="tab-btn" data-tab="spirits">Spirits</button>
+        </div>
+    </nav>
+
+    <main class="menu-main">
+
+        <!-- ── DINNER ── -->
+        <section id="dinner" class="menu-section active">
+            <ul class="menu-list">
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Poached eggs on toast</span>
+                        <span class="item-price">€8.50</span>
+                    </div>
+                    <p class="item-desc">With a side salad</p>
+                    <div class="item-badges"><span class="badge badge-v">V</span></div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Smashed avocado</span>
+                        <span class="item-price">€8.50</span>
+                    </div>
+                    <p class="item-desc">With marinated feta on sourdough</p>
+                    <div class="item-badges"><span class="badge badge-v">V</span></div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">BLT</span>
+                        <span class="item-price">€9.50</span>
+                    </div>
+                    <p class="item-desc">On a brioche bun</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Burrito 'Con Carne'</span>
+                        <span class="item-price">€9.50</span>
+                    </div>
+                    <p class="item-desc">Tortilla wrap with chilli con carne, rice, cheddar cheese and garlic dip</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Burrito 'Sin Carne'</span>
+                        <span class="item-price">€9.50</span>
+                    </div>
+                    <p class="item-desc">Tortilla wrap with chilli sin carne, rice, cheddar cheese and garlic dip</p>
+                    <div class="item-badges"><span class="badge badge-v">V</span></div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Yum-Cha Waffle</span>
+                        <span class="item-price">€10.50</span>
+                    </div>
+                    <p class="item-desc">Savoury waffle, soy glazed mushroom and fried egg</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Vegan Waffle</span>
+                        <span class="item-price">€10.50</span>
+                    </div>
+                    <p class="item-desc">Cinnamon raisin waffle with apple compote and shaved almonds</p>
+                    <div class="item-badges"><span class="badge badge-vegan">🌱 Vegan</span></div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Huevos Avocados</span>
+                        <span class="item-price">€10.50</span>
+                    </div>
+                    <p class="item-desc">Toasted brioche, avocado, poached eggs, tomato relish, spinach and fennel salad</p>
+                    <div class="item-badges"><span class="badge badge-v">V</span></div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Eggs Benedict</span>
+                        <span class="item-price">€10.50</span>
+                    </div>
+                    <p class="item-desc">2 poached eggs, ham, brioche, Hollandaise and a side salad</p>
+                    <p class="item-variant">+ Salmon variant &mdash; €13.50</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Flat Bread Pizza Style</span>
+                        <span class="item-price">€10.50</span>
+                    </div>
+                    <p class="item-desc">Flatbread, Bechamel, truffle, mozzarella and truffle potato</p>
+                    <div class="item-badges"><span class="badge badge-v">V</span></div>
+                    <p class="item-variant">+ Bacon variant &mdash; €13.50</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Caesar Salad</span>
+                        <span class="item-price">€11.50</span>
+                    </div>
+                    <p class="item-desc">Egg, romaine lettuce, parmesan and sourdough croutons</p>
+                    <div class="item-badges"><span class="badge badge-v">V</span></div>
+                    <p class="item-variant">+ Chicken &mdash; €13.50 &nbsp;&middot;&nbsp; + Salmon &mdash; €14.50</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Quinoa Salad</span>
+                        <span class="item-price">€12.50</span>
+                    </div>
+                    <p class="item-desc">Quinoa, pumpkin, papadum and dukkah</p>
+                    <div class="item-badges">
+                        <span class="badge badge-vegan">🌱 Vegan</span>
+                        <span class="badge badge-gf">GF</span>
+                    </div>
+                </li>
+
+            </ul>
         </section>
+
+        <!-- ── BORREL BITES ── -->
+        <section id="borrel" class="menu-section">
+            <ul class="menu-list">
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Olives</span>
+                        <span class="item-price">€3.50</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Nuts</span>
+                        <span class="item-price">€3.50</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Olives &amp; Nuts</span>
+                        <span class="item-price">€6.00</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Fries</span>
+                        <span class="item-price">€4.50</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">K.A. Fries</span>
+                        <span class="item-price">€6.50</span>
+                    </div>
+                    <p class="item-desc">With truffle mayo &amp; parmesan</p>
+                    <div class="item-badges"><span class="badge badge-v">V</span></div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Jalape&ntilde;o Cheese Poppers</span>
+                        <span class="item-price">€6.70</span>
+                    </div>
+                    <p class="item-desc">With homemade chilli sauce</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Veggie Gyoza</span>
+                        <span class="item-price">€6.50</span>
+                    </div>
+                    <p class="item-desc">With homemade chilli sauce</p>
+                    <div class="item-badges"><span class="badge badge-v">V</span></div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Bitterballen</span>
+                        <span class="item-price">€6.70</span>
+                    </div>
+                    <p class="item-desc">With Dutch mustard</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Vegan Bitterballen</span>
+                        <span class="item-price">€7.50</span>
+                    </div>
+                    <p class="item-desc">With Dutch mustard</p>
+                    <div class="item-badges"><span class="badge badge-vegan">🌱 Vegan</span></div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Dutch 'Kaas Stengel'</span>
+                        <span class="item-price">€7.20</span>
+                    </div>
+                    <p class="item-desc">With Dutch mustard</p>
+                    <div class="item-badges"><span class="badge badge-v">V</span></div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Bread &amp; Spread</span>
+                        <span class="item-price">€7.00</span>
+                    </div>
+                    <p class="item-desc">Selection of breads and spreads</p>
+                </li>
+
+                <li class="menu-item item-featured">
+                    <div class="item-top">
+                        <span class="item-name">K.A. Platter</span>
+                        <span class="item-price">€17.00</span>
+                    </div>
+                    <p class="item-desc">A little bit of everything and more</p>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- ── EXTRAS ── -->
+        <section id="extras" class="menu-section">
+            <p class="section-note">Add any of these to your dish</p>
+            <ul class="menu-list extras-grid">
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Bread</span>
+                        <span class="item-price">€2.50</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Chicken</span>
+                        <span class="item-price">€3.00</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Bacon</span>
+                        <span class="item-price">€3.00</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Salmon</span>
+                        <span class="item-price">€3.50</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Half avocado</span>
+                        <span class="item-price">€2.50</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Fries</span>
+                        <span class="item-price">€4.50</span>
+                    </div>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Side salad</span>
+                        <span class="item-price">€3.50</span>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- ── COCKTAILS ── -->
+        <section id="cocktails" class="menu-section">
+            <ul class="menu-list">
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Amaretto Sour</span>
+                        <span class="item-price">€9.00</span>
+                    </div>
+                    <p class="item-desc">Disaronno, Bourbon, Egg white, Lemon</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Old Fashioned</span>
+                        <span class="item-price">€10.00</span>
+                    </div>
+                    <p class="item-desc">Bourbon, orange bitters, sugar</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Cosmopolitan</span>
+                        <span class="item-price">€9.00</span>
+                    </div>
+                    <p class="item-desc">Ketel One Vodka, Cointreau, Lime, Cranberry</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Apple Daiquiri</span>
+                        <span class="item-price">€9.00</span>
+                    </div>
+                    <p class="item-desc">Havana Club 3yr, Sour Apple, Lime</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Tommy's Margarita</span>
+                        <span class="item-price">€10.00</span>
+                    </div>
+                    <p class="item-desc">Tequila, Mezcal, Lime, Vanilla</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Dark &amp; Stormy</span>
+                        <span class="item-price">€8.00</span>
+                    </div>
+                    <p class="item-desc">Spiced Rum, Lime, Ginger beer</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Moscow Mule</span>
+                        <span class="item-price">€8.00</span>
+                    </div>
+                    <p class="item-desc">Ketel One Vodka, Lime, Ginger beer</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Tom Collins</span>
+                        <span class="item-price">€10.00</span>
+                    </div>
+                    <p class="item-desc">Tanqueray, Lemon, Soda, Sugar</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Long Island Iced Tea</span>
+                        <span class="item-price">€9.50</span>
+                    </div>
+                    <p class="item-desc">Rum, Gin, Vodka, Triple Sec, Tequila, Lemon, Lime, Coca Cola</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">Bloody Mary</span>
+                        <span class="item-price">€8.50</span>
+                    </div>
+                    <p class="item-desc">Ketel One Vodka, Tomato Juice, Lemon, Worcestershire, Tabasco</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">G&amp;T Red</span>
+                        <span class="item-price">€9.50</span>
+                    </div>
+                    <p class="item-desc">Tanqueray, Tonic, Cr&egrave;me de Cassis, Red Fruit, Mint</p>
+                </li>
+
+                <li class="menu-item">
+                    <div class="item-top">
+                        <span class="item-name">G&amp;T Black</span>
+                        <span class="item-price">€9.50</span>
+                    </div>
+                    <p class="item-desc">Hendricks, Tonic, Cr&egrave;me de Violet, Lime, Orange zest</p>
+                </li>
+
+                <li class="menu-item item-featured">
+                    <div class="item-top">
+                        <span class="item-name">Aperol Spritz for 2</span>
+                        <span class="item-price">€18.00</span>
+                    </div>
+                    <p class="item-desc">DIY-Kit with Cava &amp; Soda</p>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- ── SPIRITS ── -->
+        <section id="spirits" class="menu-section">
+
+            <div class="spirits-group">
+                <h3 class="spirits-group-title">Vodka &middot; Gin &middot; Rum</h3>
+                <ul class="spirits-list">
+                    <li><span>Ketel One Vodka</span><span>€4.00</span></li>
+                    <li><span>Tanqueray</span><span>€4.00</span></li>
+                    <li><span>Hendricks</span><span>€6.00</span></li>
+                    <li><span>Havana Club 3yr</span><span>€4.00</span></li>
+                    <li><span>Havana Club Especial</span><span>€4.50</span></li>
+                    <li><span>Havana Club 7yr</span><span>€5.00</span></li>
+                    <li><span>Union 55</span><span>€5.00</span></li>
+                    <li><span>Sailor Jerry</span><span>€4.50</span></li>
+                    <li><span>Bundaberg Rum</span><span>€6.00</span></li>
+                </ul>
+            </div>
+
+            <div class="spirits-group">
+                <h3 class="spirits-group-title">Whiskey &middot; Bourbon &middot; Tequila &middot; Cognac</h3>
+                <ul class="spirits-list">
+                    <li><span>Jack Daniels</span><span>€4.50</span></li>
+                    <li><span>Jack Daniels Honey</span><span>€4.50</span></li>
+                    <li><span>Bulleit Bourbon</span><span>€5.00</span></li>
+                    <li><span>Johnnie Walker Black</span><span>€6.00</span></li>
+                    <li><span>Chivas 12yr</span><span>€6.50</span></li>
+                    <li><span>Talisker 10</span><span>€6.00</span></li>
+                    <li><span>Martell VS</span><span>€6.00</span></li>
+                    <li><span>Jose Cuervo Blanco</span><span>€4.00</span></li>
+                    <li><span>Corralejo Blanco</span><span>€5.00</span></li>
+                    <li><span>Corralejo Reposado</span><span>€6.00</span></li>
+                </ul>
+            </div>
+
+            <div class="spirits-group">
+                <h3 class="spirits-group-title">Other</h3>
+                <ul class="spirits-list">
+                    <li><span>Mezcal Vida</span><span>€7.00</span></li>
+                    <li><span>Cointreau</span><span>€4.00</span></li>
+                    <li><span>Disaronno</span><span>€4.00</span></li>
+                    <li><span>Bailey's</span><span>€4.00</span></li>
+                    <li><span>Licor 43</span><span>€4.00</span></li>
+                    <li><span>Malibu</span><span>€4.00</span></li>
+                    <li><span>Sambuca</span><span>€4.00</span></li>
+                    <li><span>Jonge Jenever</span><span>€3.50</span></li>
+                    <li><span>Aperol</span><span>€4.00</span></li>
+                    <li><span>Campari</span><span>€4.00</span></li>
+                </ul>
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 Website Creatie</p>
+    <footer class="site-footer">
+        <p class="footer-brand">Koffie Academie Sloterdijk</p>
+        <p class="footer-address">Kadijks 230, 1049NS Amsterdam</p>
+        <div class="footer-social">
+            <span>Facebook: KA Sloterdijk</span>
+            <span class="footer-sep">&middot;</span>
+            <span>Instagram: KoffieAcademieSlt</span>
+        </div>
+        <div class="diet-legend">
+            <span class="badge badge-v">V</span> Vegetarian &nbsp;
+            <span class="badge badge-vegan">🌱 Vegan</span> &nbsp;
+            <span class="badge badge-gf">GF</span> Gluten-free
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
