@@ -1,0 +1,246 @@
+/* ── DIENST PAGINA STIJLEN ── */
+
+/* Navigatie altijd donker op dienst-pagina's */
+.nav.scrolled {
+    background: var(--dark-brown);
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Terug-link */
+.dienst-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: rgba(250, 245, 240, 0.5);
+    text-decoration: none;
+    margin-bottom: 2.5rem;
+    transition: color 0.2s;
+    letter-spacing: 0.03em;
+}
+
+.dienst-back:hover { color: var(--gold); }
+
+/* Hero sectie */
+.dienst-hero {
+    min-height: 65vh;
+    background: var(--dark-base);
+    display: flex;
+    align-items: center;
+    padding: 120px 2rem 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dienst-hero-orb {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(74, 43, 50, 0.6) 0%, transparent 70%);
+    top: -150px; right: -100px;
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.dienst-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.dienst-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+}
+
+.dienst-subtitle {
+    font-size: 1.1rem;
+    color: rgba(250, 245, 240, 0.6);
+    line-height: 1.75;
+    max-width: 560px;
+    margin-bottom: 2.25rem;
+}
+
+/* Secties */
+.dienst-section {
+    padding: 90px 2rem;
+    background: var(--cream);
+}
+
+.dienst-section--cream { background: var(--cream-dark); }
+.dienst-section--dark  { background: var(--dark-brown); }
+
+.dienst-container { max-width: 1000px; }
+
+.dienst-intro {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.dienst-section-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.dienst-section-title--light { color: var(--cream); }
+
+.dienst-section-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
+/* Features grid */
+.dienst-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.dienst-feature {
+    padding: 1.75rem;
+    background: var(--cream-dark);
+    border-radius: 14px;
+    border: 1px solid rgba(201, 168, 76, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dienst-section--cream .dienst-feature {
+    background: var(--cream);
+}
+
+.dienst-feature:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(201, 168, 76, 0.28);
+}
+
+.dienst-feature-icon {
+    width: 40px; height: 40px;
+    color: var(--gold-dark);
+    margin-bottom: 1.1rem;
+}
+
+.dienst-feature-icon svg { width: 100%; height: 100%; }
+
+.dienst-feature h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.6rem;
+}
+
+.dienst-feature p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+/* Signalen grid (redesign pagina) */
+.dienst-signals-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.dienst-signal {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1.1rem 1.25rem;
+    background: rgba(200, 80, 80, 0.04);
+    border: 1px solid rgba(200, 80, 80, 0.1);
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #6a3a3a;
+    line-height: 1.5;
+}
+
+.signal-icon {
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.signal-icon--bad { color: #c05050; }
+
+/* Stappen (dark sectie) */
+.dienst-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.dienst-step {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.dienst-step-num {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.5;
+    line-height: 1;
+    padding-top: 2px;
+}
+
+.dienst-step-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+}
+
+.dienst-step-desc {
+    font-size: 0.88rem;
+    color: rgba(250, 245, 240, 0.5);
+    line-height: 1.8;
+}
+
+/* CTA sectie (hergebruik van main style) */
+.dienst-cta {
+    padding: 100px 2rem;
+    background: var(--dark-base);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .dienst-features-grid,
+    .dienst-signals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dienst-hero {
+        min-height: auto;
+        padding: 100px 2rem 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dienst-step {
+        grid-template-columns: 40px 1fr;
+        gap: 1rem;
+    }
+}
