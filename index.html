@@ -1,488 +1,472 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu — Koffie Academie Sloterdijk</title>
+    <title>Velox Studio — Websites die werken</title>
+    <meta name="description" content="Velox Studio bouwt professionele websites voor bedrijven zonder online aanwezigheid of met een verouderde website. Snel, strak en op maat.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header class="site-header">
-        <p class="brand-eyebrow">Sloterdijk</p>
-        <h1 class="brand-name">Koffie Academie</h1>
-        <p class="brand-address">Kadijks 230 &middot; 1049NS Amsterdam</p>
-    </header>
-
-    <nav class="tab-nav" id="tabNav">
-        <div class="tabs-wrapper">
-            <button class="tab-btn active" data-tab="dinner">Dinner</button>
-            <button class="tab-btn" data-tab="borrel">Borrel Bites</button>
-            <button class="tab-btn" data-tab="extras">Extras</button>
-            <button class="tab-btn" data-tab="cocktails">Cocktails</button>
-            <button class="tab-btn" data-tab="spirits">Spirits</button>
+    <!-- ── NAVIGATIE ── -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <img src="assets/logo-velox.png" alt="Velox Studio" height="48">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#diensten">Diensten</a></li>
+                <li><a href="#werkwijze">Werkwijze</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-gold nav-cta">Gratis gesprek</a>
+            <button class="nav-burger" id="burger" aria-label="Menu openen">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-mobile" id="mobileMenu">
+            <a href="#diensten">Diensten</a>
+            <a href="#werkwijze">Werkwijze</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact" class="btn btn-gold">Gratis gesprek</a>
         </div>
     </nav>
 
-    <main class="menu-main">
+    <!-- ── HERO ── -->
+    <section class="hero" id="home">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-orb hero-orb--3"></div>
 
-        <!-- ── DINNER ── -->
-        <section id="dinner" class="menu-section active">
-            <ul class="menu-list">
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Poached eggs on toast</span>
-                        <span class="item-price">€8.50</span>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Velox Studio &mdash; Webdesign &amp; Ontwikkeling</p>
+                <h1 class="hero-title">
+                    <span class="hero-line">Uw bedrijf verdient</span>
+                    <span class="hero-line">een website</span>
+                    <span class="hero-line hero-line--accent">die w&eacute;rkt.</span>
+                </h1>
+                <p class="hero-sub">
+                    Uw klanten zoeken u online — elke dag. Velox Studio bouwt websites die opvallen, overtuigen en converteren. Voor bedrijven die klaar zijn om te groeien.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn btn-gold btn-lg">Gratis gesprek inplannen</a>
+                    <a href="#portfolio" class="btn btn-outline btn-lg">Bekijk ons werk</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <span class="trust-num" data-target="50" data-suffix="+">50+</span>
+                        <span class="trust-label">Websites gebouwd</span>
                     </div>
-                    <p class="item-desc">With a side salad</p>
-                    <div class="item-badges"><span class="badge badge-v">V</span></div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Smashed avocado</span>
-                        <span class="item-price">€8.50</span>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-num" data-target="100" data-suffix="%">100%</span>
+                        <span class="trust-label">Klanttevredenheid</span>
                     </div>
-                    <p class="item-desc">With marinated feta on sourdough</p>
-                    <div class="item-badges"><span class="badge badge-v">V</span></div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">BLT</span>
-                        <span class="item-price">€9.50</span>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-num">&lt;&nbsp;4&nbsp;wkn</span>
+                        <span class="trust-label">Gemiddelde doorlooptijd</span>
                     </div>
-                    <p class="item-desc">On a brioche bun</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Burrito 'Con Carne'</span>
-                        <span class="item-price">€9.50</span>
-                    </div>
-                    <p class="item-desc">Tortilla wrap with chilli con carne, rice, cheddar cheese and garlic dip</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Burrito 'Sin Carne'</span>
-                        <span class="item-price">€9.50</span>
-                    </div>
-                    <p class="item-desc">Tortilla wrap with chilli sin carne, rice, cheddar cheese and garlic dip</p>
-                    <div class="item-badges"><span class="badge badge-v">V</span></div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Yum-Cha Waffle</span>
-                        <span class="item-price">€10.50</span>
-                    </div>
-                    <p class="item-desc">Savoury waffle, soy glazed mushroom and fried egg</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Vegan Waffle</span>
-                        <span class="item-price">€10.50</span>
-                    </div>
-                    <p class="item-desc">Cinnamon raisin waffle with apple compote and shaved almonds</p>
-                    <div class="item-badges"><span class="badge badge-vegan">🌱 Vegan</span></div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Huevos Avocados</span>
-                        <span class="item-price">€10.50</span>
-                    </div>
-                    <p class="item-desc">Toasted brioche, avocado, poached eggs, tomato relish, spinach and fennel salad</p>
-                    <div class="item-badges"><span class="badge badge-v">V</span></div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Eggs Benedict</span>
-                        <span class="item-price">€10.50</span>
-                    </div>
-                    <p class="item-desc">2 poached eggs, ham, brioche, Hollandaise and a side salad</p>
-                    <p class="item-variant">+ Salmon variant &mdash; €13.50</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Flat Bread Pizza Style</span>
-                        <span class="item-price">€10.50</span>
-                    </div>
-                    <p class="item-desc">Flatbread, Bechamel, truffle, mozzarella and truffle potato</p>
-                    <div class="item-badges"><span class="badge badge-v">V</span></div>
-                    <p class="item-variant">+ Bacon variant &mdash; €13.50</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Caesar Salad</span>
-                        <span class="item-price">€11.50</span>
-                    </div>
-                    <p class="item-desc">Egg, romaine lettuce, parmesan and sourdough croutons</p>
-                    <div class="item-badges"><span class="badge badge-v">V</span></div>
-                    <p class="item-variant">+ Chicken &mdash; €13.50 &nbsp;&middot;&nbsp; + Salmon &mdash; €14.50</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Quinoa Salad</span>
-                        <span class="item-price">€12.50</span>
-                    </div>
-                    <p class="item-desc">Quinoa, pumpkin, papadum and dukkah</p>
-                    <div class="item-badges">
-                        <span class="badge badge-vegan">🌱 Vegan</span>
-                        <span class="badge badge-gf">GF</span>
-                    </div>
-                </li>
-
-            </ul>
-        </section>
-
-        <!-- ── BORREL BITES ── -->
-        <section id="borrel" class="menu-section">
-            <ul class="menu-list">
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Olives</span>
-                        <span class="item-price">€3.50</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Nuts</span>
-                        <span class="item-price">€3.50</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Olives &amp; Nuts</span>
-                        <span class="item-price">€6.00</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Fries</span>
-                        <span class="item-price">€4.50</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">K.A. Fries</span>
-                        <span class="item-price">€6.50</span>
-                    </div>
-                    <p class="item-desc">With truffle mayo &amp; parmesan</p>
-                    <div class="item-badges"><span class="badge badge-v">V</span></div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Jalape&ntilde;o Cheese Poppers</span>
-                        <span class="item-price">€6.70</span>
-                    </div>
-                    <p class="item-desc">With homemade chilli sauce</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Veggie Gyoza</span>
-                        <span class="item-price">€6.50</span>
-                    </div>
-                    <p class="item-desc">With homemade chilli sauce</p>
-                    <div class="item-badges"><span class="badge badge-v">V</span></div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Bitterballen</span>
-                        <span class="item-price">€6.70</span>
-                    </div>
-                    <p class="item-desc">With Dutch mustard</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Vegan Bitterballen</span>
-                        <span class="item-price">€7.50</span>
-                    </div>
-                    <p class="item-desc">With Dutch mustard</p>
-                    <div class="item-badges"><span class="badge badge-vegan">🌱 Vegan</span></div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Dutch 'Kaas Stengel'</span>
-                        <span class="item-price">€7.20</span>
-                    </div>
-                    <p class="item-desc">With Dutch mustard</p>
-                    <div class="item-badges"><span class="badge badge-v">V</span></div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Bread &amp; Spread</span>
-                        <span class="item-price">€7.00</span>
-                    </div>
-                    <p class="item-desc">Selection of breads and spreads</p>
-                </li>
-
-                <li class="menu-item item-featured">
-                    <div class="item-top">
-                        <span class="item-name">K.A. Platter</span>
-                        <span class="item-price">€17.00</span>
-                    </div>
-                    <p class="item-desc">A little bit of everything and more</p>
-                </li>
-
-            </ul>
-        </section>
-
-        <!-- ── EXTRAS ── -->
-        <section id="extras" class="menu-section">
-            <p class="section-note">Add any of these to your dish</p>
-            <ul class="menu-list extras-grid">
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Bread</span>
-                        <span class="item-price">€2.50</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Chicken</span>
-                        <span class="item-price">€3.00</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Bacon</span>
-                        <span class="item-price">€3.00</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Salmon</span>
-                        <span class="item-price">€3.50</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Half avocado</span>
-                        <span class="item-price">€2.50</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Fries</span>
-                        <span class="item-price">€4.50</span>
-                    </div>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Side salad</span>
-                        <span class="item-price">€3.50</span>
-                    </div>
-                </li>
-
-            </ul>
-        </section>
-
-        <!-- ── COCKTAILS ── -->
-        <section id="cocktails" class="menu-section">
-            <ul class="menu-list">
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Amaretto Sour</span>
-                        <span class="item-price">€9.00</span>
-                    </div>
-                    <p class="item-desc">Disaronno, Bourbon, Egg white, Lemon</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Old Fashioned</span>
-                        <span class="item-price">€10.00</span>
-                    </div>
-                    <p class="item-desc">Bourbon, orange bitters, sugar</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Cosmopolitan</span>
-                        <span class="item-price">€9.00</span>
-                    </div>
-                    <p class="item-desc">Ketel One Vodka, Cointreau, Lime, Cranberry</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Apple Daiquiri</span>
-                        <span class="item-price">€9.00</span>
-                    </div>
-                    <p class="item-desc">Havana Club 3yr, Sour Apple, Lime</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Tommy's Margarita</span>
-                        <span class="item-price">€10.00</span>
-                    </div>
-                    <p class="item-desc">Tequila, Mezcal, Lime, Vanilla</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Dark &amp; Stormy</span>
-                        <span class="item-price">€8.00</span>
-                    </div>
-                    <p class="item-desc">Spiced Rum, Lime, Ginger beer</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Moscow Mule</span>
-                        <span class="item-price">€8.00</span>
-                    </div>
-                    <p class="item-desc">Ketel One Vodka, Lime, Ginger beer</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Tom Collins</span>
-                        <span class="item-price">€10.00</span>
-                    </div>
-                    <p class="item-desc">Tanqueray, Lemon, Soda, Sugar</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Long Island Iced Tea</span>
-                        <span class="item-price">€9.50</span>
-                    </div>
-                    <p class="item-desc">Rum, Gin, Vodka, Triple Sec, Tequila, Lemon, Lime, Coca Cola</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">Bloody Mary</span>
-                        <span class="item-price">€8.50</span>
-                    </div>
-                    <p class="item-desc">Ketel One Vodka, Tomato Juice, Lemon, Worcestershire, Tabasco</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">G&amp;T Red</span>
-                        <span class="item-price">€9.50</span>
-                    </div>
-                    <p class="item-desc">Tanqueray, Tonic, Cr&egrave;me de Cassis, Red Fruit, Mint</p>
-                </li>
-
-                <li class="menu-item">
-                    <div class="item-top">
-                        <span class="item-name">G&amp;T Black</span>
-                        <span class="item-price">€9.50</span>
-                    </div>
-                    <p class="item-desc">Hendricks, Tonic, Cr&egrave;me de Violet, Lime, Orange zest</p>
-                </li>
-
-                <li class="menu-item item-featured">
-                    <div class="item-top">
-                        <span class="item-name">Aperol Spritz for 2</span>
-                        <span class="item-price">€18.00</span>
-                    </div>
-                    <p class="item-desc">DIY-Kit with Cava &amp; Soda</p>
-                </li>
-
-            </ul>
-        </section>
-
-        <!-- ── SPIRITS ── -->
-        <section id="spirits" class="menu-section">
-
-            <div class="spirits-group">
-                <h3 class="spirits-group-title">Vodka &middot; Gin &middot; Rum</h3>
-                <ul class="spirits-list">
-                    <li><span>Ketel One Vodka</span><span>€4.00</span></li>
-                    <li><span>Tanqueray</span><span>€4.00</span></li>
-                    <li><span>Hendricks</span><span>€6.00</span></li>
-                    <li><span>Havana Club 3yr</span><span>€4.00</span></li>
-                    <li><span>Havana Club Especial</span><span>€4.50</span></li>
-                    <li><span>Havana Club 7yr</span><span>€5.00</span></li>
-                    <li><span>Union 55</span><span>€5.00</span></li>
-                    <li><span>Sailor Jerry</span><span>€4.50</span></li>
-                    <li><span>Bundaberg Rum</span><span>€6.00</span></li>
-                </ul>
+                </div>
             </div>
 
-            <div class="spirits-group">
-                <h3 class="spirits-group-title">Whiskey &middot; Bourbon &middot; Tequila &middot; Cognac</h3>
-                <ul class="spirits-list">
-                    <li><span>Jack Daniels</span><span>€4.50</span></li>
-                    <li><span>Jack Daniels Honey</span><span>€4.50</span></li>
-                    <li><span>Bulleit Bourbon</span><span>€5.00</span></li>
-                    <li><span>Johnnie Walker Black</span><span>€6.00</span></li>
-                    <li><span>Chivas 12yr</span><span>€6.50</span></li>
-                    <li><span>Talisker 10</span><span>€6.00</span></li>
-                    <li><span>Martell VS</span><span>€6.00</span></li>
-                    <li><span>Jose Cuervo Blanco</span><span>€4.00</span></li>
-                    <li><span>Corralejo Blanco</span><span>€5.00</span></li>
-                    <li><span>Corralejo Reposado</span><span>€6.00</span></li>
-                </ul>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="browser-mockup">
+                    <div class="browser-bar">
+                        <span class="browser-dot bd-red"></span>
+                        <span class="browser-dot bd-yellow"></span>
+                        <span class="browser-dot bd-green"></span>
+                        <span class="browser-url-bar">velox-studio.nl</span>
+                    </div>
+                    <div class="browser-body">
+                        <div class="mock-nav-bar">
+                            <div class="mock-logo-block"></div>
+                            <div class="mock-nav-links">
+                                <div class="mock-link"></div>
+                                <div class="mock-link"></div>
+                                <div class="mock-link"></div>
+                                <div class="mock-btn-pill"></div>
+                            </div>
+                        </div>
+                        <div class="mock-hero-area">
+                            <div class="mock-headline"></div>
+                            <div class="mock-subline"></div>
+                            <div class="mock-subline mock-subline--short"></div>
+                            <div class="mock-cta-row">
+                                <div class="mock-cta-btn"></div>
+                                <div class="mock-cta-ghost"></div>
+                            </div>
+                        </div>
+                        <div class="mock-cards-row">
+                            <div class="mock-card-sm">
+                                <div class="mock-card-icon"></div>
+                                <div class="mock-card-line"></div>
+                                <div class="mock-card-line mock-card-line--short"></div>
+                            </div>
+                            <div class="mock-card-sm mock-card-sm--featured">
+                                <div class="mock-card-icon"></div>
+                                <div class="mock-card-line"></div>
+                                <div class="mock-card-line mock-card-line--short"></div>
+                            </div>
+                            <div class="mock-card-sm">
+                                <div class="mock-card-icon"></div>
+                                <div class="mock-card-line"></div>
+                                <div class="mock-card-line mock-card-line--short"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="browser-glow"></div>
             </div>
-
-            <div class="spirits-group">
-                <h3 class="spirits-group-title">Other</h3>
-                <ul class="spirits-list">
-                    <li><span>Mezcal Vida</span><span>€7.00</span></li>
-                    <li><span>Cointreau</span><span>€4.00</span></li>
-                    <li><span>Disaronno</span><span>€4.00</span></li>
-                    <li><span>Bailey's</span><span>€4.00</span></li>
-                    <li><span>Licor 43</span><span>€4.00</span></li>
-                    <li><span>Malibu</span><span>€4.00</span></li>
-                    <li><span>Sambuca</span><span>€4.00</span></li>
-                    <li><span>Jonge Jenever</span><span>€3.50</span></li>
-                    <li><span>Aperol</span><span>€4.00</span></li>
-                    <li><span>Campari</span><span>€4.00</span></li>
-                </ul>
-            </div>
-
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-        <p class="footer-brand">Koffie Academie Sloterdijk</p>
-        <p class="footer-address">Kadijks 230, 1049NS Amsterdam</p>
-        <div class="footer-social">
-            <span>Facebook: KA Sloterdijk</span>
-            <span class="footer-sep">&middot;</span>
-            <span>Instagram: KoffieAcademieSlt</span>
         </div>
-        <div class="diet-legend">
-            <span class="badge badge-v">V</span> Vegetarian &nbsp;
-            <span class="badge badge-vegan">🌱 Vegan</span> &nbsp;
-            <span class="badge badge-gf">GF</span> Gluten-free
+
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ── PROBLEEM / OPLOSSING ── -->
+    <section class="problem" id="probleem">
+        <div class="container">
+            <div class="problem-grid">
+                <div class="problem-col problem-col--bad reveal">
+                    <span class="col-badge col-badge--bad">Herkent u dit?</span>
+                    <h2 class="problem-heading">Zonder sterke website<br>verliest u elke dag klanten</h2>
+                    <ul class="problem-list">
+                        <li class="problem-item problem-item--bad">
+                            <span class="prob-icon">&#10005;</span>
+                            Uw bedrijf heeft geen professionele website
+                        </li>
+                        <li class="problem-item problem-item--bad">
+                            <span class="prob-icon">&#10005;</span>
+                            Uw website ziet er verouderd en onprofessioneel uit
+                        </li>
+                        <li class="problem-item problem-item--bad">
+                            <span class="prob-icon">&#10005;</span>
+                            Bezoekers haken af na slechts enkele seconden
+                        </li>
+                        <li class="problem-item problem-item--bad">
+                            <span class="prob-icon">&#10005;</span>
+                            Uw concurrent pakt uw potenti&euml;le klanten af
+                        </li>
+                    </ul>
+                </div>
+                <div class="problem-col problem-col--good reveal">
+                    <span class="col-badge col-badge--good">De Velox Studio aanpak</span>
+                    <h2 class="problem-heading problem-heading--gold">Wij zorgen dat u<br>gevonden wordt</h2>
+                    <ul class="problem-list">
+                        <li class="problem-item problem-item--good">
+                            <span class="prob-icon prob-icon--good">&#10003;</span>
+                            Een op maat gemaakte website die uw merk versterkt
+                        </li>
+                        <li class="problem-item problem-item--good">
+                            <span class="prob-icon prob-icon--good">&#10003;</span>
+                            Modern ontwerp dat bezoekers direct vertrouwen geeft
+                        </li>
+                        <li class="problem-item problem-item--good">
+                            <span class="prob-icon prob-icon--good">&#10003;</span>
+                            Snel, mobielvriendelijk en klaar voor zoekmachines
+                        </li>
+                        <li class="problem-item problem-item--good">
+                            <span class="prob-icon prob-icon--good">&#10003;</span>
+                            Resultaten die uw bedrijf laten groeien
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── DIENSTEN ── -->
+    <section class="services" id="diensten">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-eyebrow">Wat wij doen</p>
+                <h2 class="section-title">Onze diensten</h2>
+                <p class="section-sub">Van nul naar online, of van oud naar nieuw — Velox Studio heeft de expertise om uw bedrijf te laten schitteren.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="8" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 44h16M24 36v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 20h6M12 25h10M12 30h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            <rect x="26" y="18" width="10" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Nieuwe Website</h3>
+                    <p class="service-desc">Van idee tot live website. Wij bouwen uw online aanwezigheid van de grond af — professioneel, snel en volledig passend bij uw merk.</p>
+                    <ul class="service-features">
+                        <li>Op maat ontworpen design</li>
+                        <li>Mobielvriendelijk &amp; snel</li>
+                        <li>Domein &amp; hosting advies</li>
+                        <li>Inclusief contactformulier</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Meer informatie &rarr;</a>
+                </div>
+
+                <div class="service-card service-card--featured reveal">
+                    <span class="card-badge">Meest gevraagd</span>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 36l10-10 8 8 8-10 10 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="4" y="4" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="14" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Website Redesign</h3>
+                    <p class="service-desc">Uw website is verouderd? Wij geven hem een volledig nieuw leven — zelfde inhoud, revolutionair nieuw ontwerp dat converteert.</p>
+                    <ul class="service-features">
+                        <li>Analyse van bestaande website</li>
+                        <li>Volledig nieuw design</li>
+                        <li>Verbeterde gebruikerservaring</li>
+                        <li>Sneller &amp; moderner</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Meer informatie &rarr;</a>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Beheer &amp; Onderhoud</h3>
+                    <p class="service-desc">Uw website blijft actueel, veilig en snel. Wij zorgen voor updates, content-aanpassingen en technisch onderhoud — zodat u zich kunt focussen op uw bedrijf.</p>
+                    <ul class="service-features">
+                        <li>Maandelijks onderhoudspakket</li>
+                        <li>Beveiligingsupdates</li>
+                        <li>Content aanpassingen</li>
+                        <li>Technische ondersteuning</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Meer informatie &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── WERKWIJZE ── -->
+    <section class="process" id="werkwijze">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-eyebrow">Hoe werkt het</p>
+                <h2 class="section-title section-title--light">Van gesprek tot live website</h2>
+                <p class="section-sub section-sub--light">Drie stappen. Geen gedoe. Resultaat waar u trots op bent.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step reveal">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Kennismaking</h3>
+                        <p class="step-desc">We plannen een gratis gesprek van 30 minuten. We leren uw bedrijf kennen, begrijpen uw doelen en leggen helder uit wat wij voor u kunnen betekenen.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="process-step reveal">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Design &amp; Bouw</h3>
+                        <p class="step-desc">Wij ontwerpen en bouwen uw website op maat. U krijgt tussentijdse updates en volop ruimte voor feedback — zodat het eindresultaat exact klopt.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="process-step reveal">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Live &amp; Groei</h3>
+                        <p class="step-desc">Uw website gaat live. Wij zorgen voor een vlekkeloze lancering en staan klaar voor ondersteuning wanneer u die nodig heeft.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PORTFOLIO ── -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-eyebrow">Ons werk</p>
+                <h2 class="section-title">Websites die resultaat geven</h2>
+                <p class="section-sub">Bekijk een selectie van de digitale ervaringen die wij hebben gebouwd voor onze klanten.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=700&q=80&fit=crop&crop=top" alt="Hospitality website" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <p class="portfolio-tag">Horeca &amp; Hospitality</p>
+                            <h4 class="portfolio-name">Restaurant De Gouden Lepel</h4>
+                            <a href="#contact" class="portfolio-link">Vergelijkbaar project &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=700&q=80&fit=crop" alt="Zakelijke website" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <p class="portfolio-tag">Zakelijke dienstverlening</p>
+                            <h4 class="portfolio-name">Adviesbureau Van Steenbrugge</h4>
+                            <a href="#contact" class="portfolio-link">Vergelijkbaar project &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-card reveal">
+                    <div class="portfolio-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80&fit=crop" alt="E-commerce website" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <p class="portfolio-tag">E-commerce</p>
+                            <h4 class="portfolio-name">Webshop Artisaan Bakers</h4>
+                            <a href="#contact" class="portfolio-link">Vergelijkbaar project &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── TESTIMONIAL ── -->
+    <section class="testimonial testimonial--dark">
+        <div class="container">
+            <div class="testimonial-card reveal">
+                <div class="quote-mark">&ldquo;</div>
+                <blockquote class="quote-text">
+                    Velox Studio heeft ons bedrijf online gezet op een manier die we nooit hadden verwacht. Binnen drie weken hadden we al de eerste aanvragen via de website. Professioneel, snel en precies wat we zochten.
+                </blockquote>
+                <div class="quote-author">
+                    <div class="author-avatar">JV</div>
+                    <div class="author-info">
+                        <strong class="author-name">Jan de Vries</strong>
+                        <span class="author-company">Eigenaar, Dakdekkersbedrijf De Vries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section class="faq" id="faq">
+        <div class="container faq-container">
+            <div class="section-header reveal">
+                <p class="section-eyebrow">Veelgestelde vragen</p>
+                <h2 class="section-title">Heeft u vragen?</h2>
+                <p class="section-sub">Hieronder vindt u antwoorden op de meest gestelde vragen. Staat uw vraag er niet bij? Neem gerust contact op.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Hoe lang duurt het bouwen van een website?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>De gemiddelde doorlooptijd is 2 tot 4 weken, afhankelijk van de complexiteit en uw beschikbaarheid voor feedback. Wij communiceren helder over de planning en houden u altijd op de hoogte.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Wat kost een website bij Velox Studio?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>De prijs hangt af van uw wensen en de omvang van het project. Plan een gratis gesprek in en wij maken een transparante offerte — zonder verborgen kosten of verrassingen.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Kan ik mijn bestaande website laten vernieuwen?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absoluut. Website redesign is &eacute;&eacute;n van onze meest gevraagde diensten. We analyseren uw huidige website, bewaren wat goed werkt en vernieuwen wat niet meer past bij uw merk of doelen.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Heb ik zelf technische kennis nodig?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nee, helemaal niet. Wij regelen alles technisch van A tot Z. U levert uw wensen en inhoud aan — de rest doen wij. Na oplevering leggen wij u alles helder uit.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Wordt mijn website gevonden in Google?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Elke website die wij bouwen is technisch geoptimaliseerd voor zoekmachines (SEO). We zorgen voor een solide basis zodat Google uw website correct vindt en indexeert. Verdere SEO-trajecten zijn mogelijk op aanvraag.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA / CONTACT ── -->
+    <section class="cta-banner" id="contact">
+        <div class="cta-orb cta-orb--1"></div>
+        <div class="cta-orb cta-orb--2"></div>
+        <div class="container">
+            <div class="cta-content reveal">
+                <p class="section-eyebrow">Klaar voor de volgende stap?</p>
+                <h2 class="cta-title">Uw website wacht.</h2>
+                <p class="cta-sub">Plan een gratis gesprek van 30 minuten. Geen verplichtingen — gewoon een open gesprek over uw online mogelijkheden en wat Velox Studio voor u kan betekenen.</p>
+                <div class="cta-actions">
+                    <a href="mailto:info@velox-studio.nl" class="btn btn-gold btn-lg">info@velox-studio.nl</a>
+                    <a href="tel:+31612345678" class="btn btn-outline-light btn-lg">+31 6 12 34 56 78</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo-velox.png" alt="Velox Studio" height="64">
+                    <p class="footer-tagline">Websites die werken,<br>voor bedrijven die groeien.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Diensten</h4>
+                    <ul class="footer-links">
+                        <li><a href="#diensten">Nieuwe website</a></li>
+                        <li><a href="#diensten">Website redesign</a></li>
+                        <li><a href="#diensten">Beheer &amp; onderhoud</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Navigatie</h4>
+                    <ul class="footer-links">
+                        <li><a href="#werkwijze">Werkwijze</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@velox-studio.nl">info@velox-studio.nl</a></li>
+                        <li><a href="tel:+31612345678">+31 6 12 34 56 78</a></li>
+                        <li>Nederland</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Velox Studio. Alle rechten voorbehouden.</p>
+                <p class="footer-made">Gemaakt door Velox Studio</p>
+            </div>
         </div>
     </footer>
 
