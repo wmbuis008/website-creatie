@@ -1,6 +1,17 @@
 // ── GSAP REGISTRATIE ──
 gsap.registerPlugin(ScrollTrigger);
 
+// Veiligheidsnnet: zorg dat .reveal elementen nooit permanent onzichtbaar blijven
+// als ScrollTrigger niet vuurt (bijv. element al zichtbaar bij laden)
+ScrollTrigger.addEventListener('refresh', () => {
+    document.querySelectorAll('.reveal').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.95) {
+            gsap.set(el, { opacity: 1, y: 0, x: 0, scale: 1, clearProps: 'transform' });
+        }
+    });
+});
+
 // ── NAVIGATIE: scroll state ──
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
