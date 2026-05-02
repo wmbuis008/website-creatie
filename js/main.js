@@ -168,3 +168,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ── DIENST PAGINA'S: reveal animaties ──
+gsap.utils.toArray('.dienst-intro, .dienst-feature, .dienst-signal').forEach(el => {
+    gsap.fromTo(el,
+        { y: 28, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 85%' } }
+    );
+});
+gsap.utils.toArray('.dienst-step').forEach(el => {
+    gsap.fromTo(el,
+        { x: -28, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.6, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 87%' } }
+    );
+});
+if (document.querySelector('.dienst-cta')) {
+    gsap.fromTo('.dienst-cta .cta-content',
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out',
+          scrollTrigger: { trigger: '.dienst-cta', start: 'top 78%' } }
+    );
+}

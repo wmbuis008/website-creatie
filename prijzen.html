@@ -128,7 +128,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="index.html#contact" class="btn btn-pakket btn-pakket--outline">Kies Standaard</a>
+                    <a href="offerte.html?pakket=standaard" class="btn btn-pakket btn-pakket--outline">Kies Standaard</a>
                 </div>
 
                 <!-- SUPER (FEATURED) -->
@@ -199,7 +199,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="index.html#contact" class="btn btn-pakket btn-pakket--gold">Kies Super</a>
+                    <a href="offerte.html?pakket=super" class="btn btn-pakket btn-pakket--gold">Kies Super</a>
                 </div>
 
                 <!-- PREMIUM -->
@@ -270,7 +270,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="index.html#contact" class="btn btn-pakket btn-pakket--outline">Kies Premium</a>
+                    <a href="offerte.html?pakket=premium" class="btn btn-pakket btn-pakket--outline">Kies Premium</a>
                 </div>
 
             </div>
@@ -498,11 +498,22 @@
             scrollTrigger: { trigger: '.pakket-grid', start: 'top 82%' }
         });
 
-        // Comparison table
+        // Comparison table: scroll reveal
         gsap.from('.vergelijk-wrap', {
             y: 40, opacity: 0, duration: 0.8, ease: 'power3.out',
             scrollTrigger: { trigger: '.vergelijk-section', start: 'top 80%' }
         });
+
+        // Comparison table: hover omhoog animatie
+        const vWrap = document.querySelector('.vergelijk-wrap');
+        if (vWrap) {
+            vWrap.addEventListener('mouseenter', () => {
+                gsap.to(vWrap, { y: -12, boxShadow: '0 24px 60px rgba(0,0,0,0.14)', duration: 0.4, ease: 'power2.out' });
+            });
+            vWrap.addEventListener('mouseleave', () => {
+                gsap.to(vWrap, { y: 0, boxShadow: '0 4px 30px rgba(0,0,0,0.07)', duration: 0.4, ease: 'power2.out' });
+            });
+        }
 
         // FAQ
         document.querySelectorAll('.faq-question').forEach(btn => {
