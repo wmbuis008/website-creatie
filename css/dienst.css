@@ -1,5 +1,36 @@
 /* ── DIENST PAGINA STIJLEN ── */
 
+/* WIP Banner */
+.wip-banner {
+    background: linear-gradient(135deg, #3D2800, #5A3A00);
+    border-bottom: 2px solid rgba(201, 168, 76, 0.4);
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--gold-light);
+    position: relative;
+    z-index: 90;
+}
+
+.wip-banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.wip-icon {
+    font-size: 1.1rem;
+}
+
+.wip-banner a {
+    color: var(--gold);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 /* Navigatie altijd donker op dienst-pagina's */
 .nav.scrolled {
     background: var(--dark-brown);

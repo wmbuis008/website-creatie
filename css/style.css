@@ -153,36 +153,10 @@ body {
 
 .section-sub--light { color: rgba(250, 245, 240, 0.55); }
 
-/* Scroll-reveal animaties */
+/* Scroll-reveal: GSAP beheert animaties — opacity:0 voorkomt FOUC */
 .reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Staggering voor grid-items */
-.services-grid .service-card:nth-child(1) { transition-delay: 0ms; }
-.services-grid .service-card:nth-child(2) { transition-delay: 120ms; }
-.services-grid .service-card:nth-child(3) { transition-delay: 240ms; }
-
-.portfolio-grid .portfolio-card:nth-child(1) { transition-delay: 0ms; }
-.portfolio-grid .portfolio-card:nth-child(2) { transition-delay: 140ms; }
-.portfolio-grid .portfolio-card:nth-child(3) { transition-delay: 280ms; }
-
-.faq-list .faq-item:nth-child(1) { transition-delay: 0ms; }
-.faq-list .faq-item:nth-child(2) { transition-delay: 60ms; }
-.faq-list .faq-item:nth-child(3) { transition-delay: 120ms; }
-.faq-list .faq-item:nth-child(4) { transition-delay: 180ms; }
-.faq-list .faq-item:nth-child(5) { transition-delay: 240ms; }
-
-.problem-col:nth-child(1) { transition-delay: 0ms; }
-.problem-col:nth-child(2) { transition-delay: 150ms; }
 
 /* ── NAVIGATIE ── */
 .nav {
@@ -367,7 +341,6 @@ body {
     color: var(--gold);
     margin-bottom: 1.75rem;
     opacity: 0;
-    animation: fadeUp 0.8s 0.2s ease forwards;
 }
 
 .hero-title {
@@ -382,12 +355,7 @@ body {
 .hero-line {
     display: block;
     opacity: 0;
-    animation: fadeUp 0.9s ease forwards;
 }
-
-.hero-line:nth-child(1) { animation-delay: 0.4s; }
-.hero-line:nth-child(2) { animation-delay: 0.6s; }
-.hero-line:nth-child(3) { animation-delay: 0.8s; }
 
 .hero-line--accent {
     background: linear-gradient(
@@ -403,7 +371,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-style: italic;
-    animation: fadeUp 0.9s ease 0.8s forwards, goldShimmer 5s linear 1.8s infinite;
+    animation: goldShimmer 5s linear 1.8s infinite;
 }
 
 @keyframes goldShimmer {
@@ -418,7 +386,6 @@ body {
     max-width: 600px;
     margin: 0 auto 2.75rem;
     opacity: 0;
-    animation: fadeUp 0.8s 1.0s ease forwards;
 }
 
 .hero-ctas {
@@ -427,7 +394,6 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     opacity: 0;
-    animation: fadeUp 0.8s 1.2s ease forwards;
 }
 
 .hero-trust {
@@ -479,7 +445,6 @@ body {
     align-items: center;
     gap: 0.5rem;
     opacity: 0;
-    animation: fadeIn 1s 2.2s ease forwards;
 }
 
 .hero-scroll span {
@@ -517,7 +482,6 @@ body {
 .hero-visual {
     position: relative;
     opacity: 0;
-    animation: fadeUp 1s ease 1.4s forwards;
 }
 
 .browser-mockup {
@@ -866,6 +830,24 @@ body {
     white-space: nowrap;
 }
 
+.card-badge--wip {
+    background: rgba(201, 168, 76, 0.15);
+    color: var(--gold);
+    border: 1px solid rgba(201, 168, 76, 0.35);
+}
+
+.service-link--wip {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+}
+
+.service-link--wip span {
+    font-size: 0.8em;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
 .service-icon {
     width: 46px;
     height: 46px;
@@ -1017,13 +999,11 @@ body {
     grid-template-rows: auto auto;
 }
 
-/* Staggering voor 6 portfolio kaarten */
-.portfolio-grid--6 .portfolio-card:nth-child(1) { transition-delay: 0ms; }
-.portfolio-grid--6 .portfolio-card:nth-child(2) { transition-delay: 100ms; }
-.portfolio-grid--6 .portfolio-card:nth-child(3) { transition-delay: 200ms; }
-.portfolio-grid--6 .portfolio-card:nth-child(4) { transition-delay: 100ms; }
-.portfolio-grid--6 .portfolio-card:nth-child(5) { transition-delay: 200ms; }
-.portfolio-grid--6 .portfolio-card:nth-child(6) { transition-delay: 300ms; }
+.portfolio-card {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
 
 .portfolio-card {
     border-radius: var(--radius-card);

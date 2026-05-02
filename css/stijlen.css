@@ -1,0 +1,661 @@
+/* ── STIJLEN PAGINA ── */
+
+/* Page header */
+.stijlen-header {
+    background: var(--dark-base);
+    padding: 120px 2rem 80px;
+    text-align: center;
+}
+
+.stijlen-main-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.stijlen-main-sub {
+    color: rgba(250, 245, 240, 0.55);
+    font-size: 1.05rem;
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.75;
+}
+
+.stijlen-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.stijlen-nav a {
+    text-decoration: none;
+    color: rgba(250, 245, 240, 0.6);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.45rem 1.1rem;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: 100px;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.stijlen-nav a:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+    background: rgba(201, 168, 76, 0.06);
+}
+
+/* Style sections: alternating 2-column layout */
+.stijl-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+    scroll-margin-top: 90px;
+}
+
+.stijl-info {
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+}
+
+.stijl-nr {
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stijl-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.stijl-desc {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.stijl-kenmerken {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 2rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid rgba(201, 168, 76, 0.3);
+    background: rgba(201, 168, 76, 0.04);
+    border-radius: 0 8px 8px 0;
+}
+
+.stijl-kenmerken li {
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    padding-left: 1rem;
+    position: relative;
+}
+
+.stijl-kenmerken li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.75rem;
+}
+
+.stijl-kenmerken--dark li { color: rgba(250, 245, 240, 0.75); }
+.stijl-kenmerken--dark { border-color: rgba(201, 168, 76, 0.25); background: rgba(201, 168, 76, 0.05); }
+.stijl-kenmerken--dark li::before { color: var(--gold); }
+
+.stijl-screenshot {
+    margin-bottom: 1.75rem;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.stijl-screenshot img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.stijl-screenshot:hover img { transform: scale(1.03); }
+
+.stijl-screenshot-label {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    padding: 0.4rem 0.75rem;
+    background: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    letter-spacing: 0.04em;
+}
+
+/* ── DEMO AREAS ── */
+.stijl-demo {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+}
+
+/* Shared demo nav */
+.stijl-demo-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.stijl-demo-logo {
+    width: 30px; height: 20px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.stijl-demo-links {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.stijl-demo-links span {
+    width: 30px; height: 6px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.stijl-demo-hero {
+    border-radius: 8px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stijl-demo-btns {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.stijl-card-sm {
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.stijl-demo-cards {
+    display: flex;
+    gap: 8px;
+}
+
+/* ── 1. MINIMALISTISCH ── */
+.stijl--minimalistisch {
+    background: #ffffff;
+}
+
+.stijl--minimalistisch .stijl-demo {
+    background: #f8f8f8;
+}
+
+.stijl--minimalistisch .stijl-demo-nav {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+}
+
+.stijl-demo-logo { background: #1a1a1a; width: 22px; height: 22px; border-radius: 4px; }
+
+.stijl--minimalistisch .stijl-demo-links span { background: #cccccc; }
+.stijl-demo-cta.min-cta { width: 60px; height: 22px; background: #1a1a1a; border-radius: 4px; }
+
+.stijl-demo-hero--min {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+}
+
+.min-h1 { height: 22px; width: 75%; background: #1a1a1a; border-radius: 4px; }
+.min-sub { height: 6px; width: 90%; background: #cccccc; border-radius: 3px; }
+.min-btn { width: 70px; height: 22px; background: #1a1a1a; border-radius: 4px; }
+.min-btn-ghost { width: 55px; height: 22px; border: 1px solid #1a1a1a; border-radius: 4px; }
+
+.min-card { background: #ffffff; border: 1px solid #e8e8e8; }
+.min-card-line { height: 6px; background: #e0e0e0; border-radius: 3px; width: 80%; }
+
+/* ── 2. DARK PREMIUM ── */
+.stijl--dark-premium {
+    background: #080408;
+}
+
+.stijl-demo--dark {
+    background: #080408;
+    position: relative;
+}
+
+.dark-nav {
+    background: rgba(26, 13, 18, 0.8);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.dark-logo { width: 24px; height: 24px; background: var(--gold); border-radius: 4px; }
+.dark-link { width: 28px; height: 5px; background: rgba(250, 245, 240, 0.2); border-radius: 3px; }
+.stijl-demo-cta.dark-cta { width: 60px; height: 24px; background: var(--gold); border-radius: 5px; }
+
+.dark-orb {
+    position: absolute;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(74, 43, 50, 0.7) 0%, transparent 70%);
+    top: -80px; right: -80px;
+    border-radius: 50%;
+    filter: blur(40px);
+    pointer-events: none;
+}
+
+.dark-hero {
+    position: relative;
+    z-index: 2;
+    padding: 16px;
+}
+
+.dark-h1 { height: 18px; width: 70%; background: rgba(250, 245, 240, 0.85); border-radius: 4px; }
+.dark-sub { height: 5px; width: 85%; background: rgba(250, 245, 240, 0.2); border-radius: 3px; }
+.dark-btn { width: 80px; height: 24px; background: var(--gold); border-radius: 5px; }
+.dark-btn-ghost { width: 65px; height: 24px; border: 1px solid rgba(201, 168, 76, 0.4); border-radius: 5px; }
+
+.dark-cards {
+    display: flex;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.dark-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(201, 168, 76, 0.08);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dark-card--feat {
+    background: rgba(74, 43, 50, 0.4);
+    border-color: rgba(201, 168, 76, 0.3);
+}
+
+.dark-card-icon { width: 18px; height: 18px; background: rgba(201, 168, 76, 0.25); border-radius: 4px; }
+.dark-card-icon--feat { background: var(--gold); }
+.dark-card-line { height: 5px; background: rgba(250, 245, 240, 0.1); border-radius: 3px; }
+.dark-card-line--feat { background: rgba(201, 168, 76, 0.3); }
+
+/* ── 3. KLEURRIJK ── */
+.stijl--kleurrijk {
+    background: #FFF9F0;
+}
+
+.stijl-demo--kleur {
+    background: linear-gradient(145deg, #FFF0F0 0%, #F0FFFF 50%, #F0F0FF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.kleur-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 2;
+}
+
+.kleur-logo { width: 28px; height: 20px; background: linear-gradient(135deg, #FF6B6B, #4ECDC4); border-radius: 4px; }
+.kleur-link { width: 26px; height: 5px; background: rgba(0, 0, 0, 0.15); border-radius: 3px; }
+.kleur-cta { width: 60px; height: 22px; background: linear-gradient(135deg, #FF6B6B, #FF8E53); border-radius: 12px; }
+
+.kleur-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(30px);
+    pointer-events: none;
+}
+
+.kleur-blob--1 { width: 200px; height: 200px; background: rgba(255, 107, 107, 0.25); top: -50px; right: 0; }
+.kleur-blob--2 { width: 150px; height: 150px; background: rgba(78, 205, 196, 0.3); bottom: 0; left: -30px; }
+
+.kleur-hero {
+    position: relative;
+    z-index: 2;
+    padding: 16px;
+}
+
+.kleur-h1 { height: 24px; width: 75%; background: #2D3436; border-radius: 6px; }
+.kleur-sub { height: 6px; width: 85%; background: rgba(0, 0, 0, 0.12); border-radius: 3px; }
+.kleur-btn { width: 80px; height: 26px; border-radius: 14px; }
+.kleur-btn--1 { background: linear-gradient(135deg, #FF6B6B, #FF8E53); }
+.kleur-btn--2 { background: linear-gradient(135deg, #4ECDC4, #45B7D1); }
+
+.kleur-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+.kleur-tile { height: 50px; border-radius: 8px; opacity: 0.75; }
+
+/* ── 4. E-COMMERCE ── */
+.stijl--ecommerce {
+    background: #F7FAFC;
+}
+
+.stijl-demo--ecom {
+    background: #ffffff;
+    border-left: 1px solid #E2E8F0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+}
+
+.ecom-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+}
+
+.ecom-logo { width: 26px; height: 20px; background: #00B894; border-radius: 4px; }
+.ecom-link { width: 26px; height: 5px; background: #CBD5E0; border-radius: 3px; }
+.ecom-cart { width: 20px; height: 20px; background: #EDF2F7; border-radius: 4px; border: 1px solid #00B894; }
+
+.ecom-banner {
+    background: linear-gradient(135deg, #00B894, #00CEC9);
+    border-radius: 8px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ecom-h1 { height: 16px; width: 65%; background: rgba(255,255,255,0.9); border-radius: 4px; }
+.ecom-sub { height: 6px; width: 85%; background: rgba(255,255,255,0.5); border-radius: 3px; }
+.ecom-btn { width: 70px; height: 22px; background: white; border-radius: 5px; }
+
+.ecom-products {
+    display: flex;
+    gap: 8px;
+}
+
+.ecom-product {
+    flex: 1;
+    background: #F7FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ecom-product--feat {
+    border-color: #00B894;
+    box-shadow: 0 0 0 1px rgba(0, 184, 148, 0.2);
+}
+
+.ecom-badge-sale {
+    position: absolute;
+    top: 4px; right: 4px;
+    background: #FF6B6B;
+    color: white;
+    font-size: 8px;
+    font-weight: 700;
+    padding: 2px 5px;
+    border-radius: 3px;
+    letter-spacing: 0.05em;
+    font-family: var(--font-sans);
+}
+
+.ecom-product-img { height: 60px; background: linear-gradient(135deg, #EDF2F7, #E2E8F0); }
+.ecom-product-line { height: 6px; background: #CBD5E0; border-radius: 3px; margin: 6px 8px; }
+.ecom-product-price { height: 8px; width: 50%; background: #2D3748; border-radius: 3px; margin: 4px 8px; }
+.ecom-product-btn { height: 18px; background: #00B894; border-radius: 4px; margin: 6px 8px; }
+
+/* ── 5. CREATIEF ── */
+.stijl--creatief {
+    background: #F8F0FF;
+}
+
+.stijl-demo--creatief {
+    background: #1A0030;
+    position: relative;
+    overflow: hidden;
+}
+
+.creatief-bg { position: absolute; inset: 0; pointer-events: none; }
+
+.creatief-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(25px);
+}
+
+.creatief-circle--1 { width: 200px; height: 200px; background: rgba(168, 85, 247, 0.4); top: -60px; right: -40px; }
+.creatief-circle--2 { width: 150px; height: 150px; background: rgba(236, 72, 153, 0.3); bottom: 20px; left: -30px; }
+.creatief-circle--3 { width: 100px; height: 100px; background: rgba(99, 102, 241, 0.35); top: 40%; left: 40%; }
+
+.creatief-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.creatief-logo { width: 28px; height: 24px; background: linear-gradient(135deg, #A855F7, #EC4899); border-radius: 6px; }
+.creatief-links { display: flex; gap: 6px; margin-left: auto; }
+.creatief-links span { width: 26px; height: 5px; background: rgba(255, 255, 255, 0.2); border-radius: 3px; }
+.creatief-cta { width: 65px; height: 24px; background: linear-gradient(135deg, #A855F7, #EC4899); border-radius: 12px; }
+
+.creatief-hero {
+    position: relative;
+    z-index: 2;
+    padding: 14px;
+}
+
+.creatief-h1 { height: 22px; width: 75%; background: rgba(255, 255, 255, 0.9); border-radius: 5px; }
+.creatief-sub { height: 5px; width: 85%; background: rgba(255, 255, 255, 0.2); border-radius: 3px; }
+.creatief-btn-row { margin-top: 10px; }
+.creatief-btn { width: 90px; height: 28px; background: linear-gradient(135deg, #A855F7, #EC4899); border-radius: 14px; }
+
+.creatief-ticker {
+    position: relative;
+    z-index: 2;
+    background: rgba(168, 85, 247, 0.2);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 6px;
+    padding: 6px 10px;
+    display: flex;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.creatief-ticker span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(168, 85, 247, 0.8);
+    font-family: var(--font-sans);
+    white-space: nowrap;
+}
+
+/* ── 6. STRAK ── */
+.stijl--strak {
+    background: #F7F9FC;
+}
+
+.stijl-demo--strak {
+    background: #ffffff;
+    border-left: 1px solid #E8EDF2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+}
+
+.strak-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #2C3E50;
+    border-radius: 8px;
+}
+
+.strak-logo { width: 28px; height: 20px; background: rgba(255,255,255,0.85); border-radius: 4px; }
+.strak-links { display: flex; gap: 6px; margin-left: auto; }
+.strak-links span { width: 28px; height: 5px; background: rgba(255,255,255,0.3); border-radius: 3px; }
+.strak-cta { width: 60px; height: 22px; background: #3498DB; border-radius: 4px; }
+
+.strak-sidebar-layout {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+}
+
+.strak-sidebar {
+    width: 60px;
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.strak-sidebar-item {
+    height: 14px;
+    background: #CBD5E0;
+    border-radius: 3px;
+}
+
+.strak-sidebar-item--active {
+    background: #2C3E50;
+}
+
+.strak-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.strak-h1 { height: 16px; width: 50%; background: #2C3E50; border-radius: 4px; }
+
+.strak-row {
+    display: flex;
+    gap: 8px;
+}
+
+.strak-card {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.strak-card-top { height: 20px; background: #2C3E50; }
+.strak-card-line { height: 5px; background: #CBD5E0; border-radius: 3px; margin: 6px 8px; }
+
+.strak-table {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.strak-table-row {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 5px 8px;
+    gap: 6px;
+}
+
+.strak-table-row:last-child { border-bottom: none; }
+
+.strak-table-row span {
+    flex: 1;
+    height: 6px;
+    background: #CBD5E0;
+    border-radius: 3px;
+    display: block;
+}
+
+.strak-table-header span { background: #2C3E50; }
+
+/* CTA section */
+.stijlen-cta {
+    background: var(--dark-base);
+    padding: 100px 2rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .stijl-section {
+        grid-template-columns: 1fr;
+    }
+
+    .stijl-demo {
+        min-height: 280px;
+        order: -1;
+    }
+
+    .stijl--dark-premium .stijl-demo,
+    .stijl--ecommerce .stijl-demo,
+    .stijl--strak .stijl-demo {
+        order: 0;
+    }
+
+    .stijl-info {
+        padding: 3rem 2rem;
+    }
+}

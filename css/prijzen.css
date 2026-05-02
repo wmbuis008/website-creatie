@@ -1,0 +1,391 @@
+/* ── PRIJZEN PAGINA ── */
+
+/* Hero */
+.prijzen-hero {
+    background: var(--dark-base);
+    padding: 140px 2rem 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.prijzen-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(80px);
+}
+
+.prijzen-orb--1 {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(74, 43, 50, 0.55) 0%, transparent 70%);
+    top: -200px; right: -100px;
+}
+
+.prijzen-orb--2 {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+    bottom: -100px; left: -80px;
+}
+
+.prijzen-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 1.25rem;
+}
+
+.prijzen-title em {
+    font-style: italic;
+    background: linear-gradient(110deg, #7A5A10 0%, #C9A84C 30%, #F0DC9A 55%, #C9A84C 80%, #7A5A10 100%);
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: goldShimmer 5s linear infinite;
+}
+
+.prijzen-sub {
+    color: rgba(250, 245, 240, 0.55);
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    line-height: 1.75;
+}
+
+.prijzen-trust {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem;
+}
+
+.ptrust-item {
+    font-size: 0.85rem;
+    color: rgba(250, 245, 240, 0.5);
+    letter-spacing: 0.04em;
+}
+
+/* Pakket section */
+.pakket-section {
+    padding: var(--section-pad) 2rem;
+    background: linear-gradient(180deg, var(--cream) 0%, #F5EBE2 100%);
+}
+
+.pakket-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 2rem;
+}
+
+.pakket-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.pakket-card:hover {
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.pakket-card--featured {
+    background: var(--dark-base);
+    border-color: rgba(201, 168, 76, 0.3);
+    box-shadow: 0 8px 50px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(201, 168, 76, 0.12);
+    transform: scale(1.02);
+}
+
+.pakket-card--featured:hover {
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(201, 168, 76, 0.2);
+}
+
+.pakket-badge {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--dark-base);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.3rem 1.25rem;
+    border-radius: 0 0 8px 8px;
+    white-space: nowrap;
+}
+
+.pakket-header {
+    padding: 2.5rem 2rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.pakket-header--dark {
+    border-color: rgba(201, 168, 76, 0.12);
+}
+
+.pakket-naam {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 1rem;
+}
+
+.pakket-prijs {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+.pakket-euro {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-top: 6px;
+}
+
+.pakket-bedrag {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1;
+}
+
+.pakket-eenmalig {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* Feature list */
+.pakket-features {
+    list-style: none;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pakket-features--dark .pakket-feature--no {
+    opacity: 0.4;
+}
+
+.pakket-feature {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+}
+
+.pakket-feature--no {
+    opacity: 0.4;
+}
+
+.pf-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.pf-icon--ok {
+    background: rgba(201, 168, 76, 0.12);
+    color: var(--gold-dark);
+}
+
+.pf-icon--gold {
+    background: rgba(201, 168, 76, 0.2);
+    color: var(--gold);
+}
+
+.pf-icon--no {
+    background: rgba(0, 0, 0, 0.04);
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.pakket-feature div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.pakket-feature div strong {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.pakket-feature div span {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* CTA buttons */
+.btn-pakket {
+    display: block;
+    text-align: center;
+    margin: 0 2rem 2rem;
+    padding: 0.9rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-pakket--outline {
+    border: 2px solid var(--gold);
+    color: var(--gold-dark);
+    background: transparent;
+}
+
+.btn-pakket--outline:hover {
+    background: var(--gold);
+    color: var(--dark-base);
+}
+
+.btn-pakket--gold {
+    background: var(--gold);
+    color: var(--dark-base);
+    border: 2px solid var(--gold);
+}
+
+.btn-pakket--gold:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+    box-shadow: 0 0 30px rgba(201, 168, 76, 0.3);
+}
+
+.pakket-note {
+    text-align: center;
+    font-size: 0.83rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.65;
+    padding: 1.5rem;
+    background: rgba(201, 168, 76, 0.04);
+    border-radius: 10px;
+    border: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+/* Vergelijkingstabel */
+.vergelijk-section {
+    padding: var(--section-pad) 2rem;
+    background: #ffffff;
+}
+
+.vergelijk-wrap {
+    overflow-x: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.07);
+}
+
+.vergelijk-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.vergelijk-table th,
+.vergelijk-table td {
+    padding: 1rem 1.25rem;
+    text-align: center;
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.vergelijk-table th:first-child,
+.vergelijk-table td:first-child {
+    text-align: left;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.vergelijk-table thead th {
+    background: var(--dark-base);
+    color: rgba(250, 245, 240, 0.6);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 1.25rem;
+}
+
+.vergelijk-table thead th:first-child { color: rgba(250, 245, 240, 0.4); }
+
+.vt-featured {
+    background: rgba(74, 43, 50, 0.04);
+}
+
+.vergelijk-table thead .vt-featured {
+    background: rgba(201, 168, 76, 0.12);
+    color: rgba(250, 245, 240, 0.85);
+}
+
+.vt-prijs {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: rgba(250, 245, 240, 0.85);
+    margin-top: 2px;
+}
+
+.vergelijk-table tbody tr:last-child td { border-bottom: none; }
+
+.vergelijk-table tbody tr:nth-child(even) td {
+    background: rgba(0, 0, 0, 0.015);
+}
+
+.vergelijk-table tbody tr:nth-child(even) .vt-featured {
+    background: rgba(74, 43, 50, 0.06);
+}
+
+.vt-ok { color: var(--gold-dark); font-weight: 700; font-size: 0.9rem; }
+.vt-ok--gold { color: var(--gold); }
+.vt-no { color: rgba(0, 0, 0, 0.2); font-size: 0.8rem; }
+
+/* FAQ op prijzen pagina */
+.prijzen-faq {
+    padding: var(--section-pad) 2rem;
+    background: linear-gradient(180deg, var(--cream) 0%, #F5EBE2 100%);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .pakket-grid {
+        grid-template-columns: 1fr;
+        max-width: 440px;
+        margin: 0 auto 2rem;
+    }
+
+    .pakket-card--featured {
+        transform: none;
+        order: -1;
+    }
+
+    .pakket-card--featured:hover {
+        transform: translateY(-4px);
+    }
+}
