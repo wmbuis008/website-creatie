@@ -184,8 +184,8 @@ body {
 }
 
 .nav.scrolled {
-    background: linear-gradient(90deg, #1C0F07 0%, #2D1810 50%, #1C0F07 100%);
-    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(201, 168, 76, 0.15);
+    background: rgba(74, 43, 50, 0.97);
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(201, 168, 76, 0.2);
     padding: 0 2rem;
 }
 
@@ -199,9 +199,9 @@ body {
 }
 
 .nav-logo img {
-    height: 48px;
+    height: 64px;
     width: auto;
-    border-radius: 6px;
+    border-radius: 0;
     transition: opacity 0.2s;
 }
 
@@ -1361,8 +1361,8 @@ body {
 
 /* ── FOOTER ── */
 .footer {
-    background: linear-gradient(180deg, #1C0F07 0%, #150C05 100%);
-    border-top: 2px solid rgba(201, 168, 76, 0.2);
+    background: linear-gradient(180deg, #4A2B32 0%, #3A1E25 100%);
+    border-top: 2px solid rgba(201, 168, 76, 0.25);
     padding: 4.5rem 2rem 2rem;
 }
 
@@ -1376,8 +1376,10 @@ body {
 
 .footer-brand img {
     margin-bottom: 1rem;
-    opacity: 0.92;
-    border-radius: 6px;
+    opacity: 1;
+    border-radius: 0;
+    height: 88px;
+    width: auto;
 }
 
 .footer-tagline {
