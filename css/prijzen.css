@@ -125,10 +125,9 @@
     flex-shrink: 0;
 }
 
-.pakket-badge-spacer {
-    height: 28px;
-    display: block;
-    flex-shrink: 0;
+.pakket-card:not(.pakket-card--featured) .pakket-badge {
+    visibility: hidden;
+    background: transparent;
 }
 
 .pakket-header {
