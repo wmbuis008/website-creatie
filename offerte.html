@@ -390,18 +390,18 @@
 
                 <!-- FORMULIER -->
                 <div class="offerte-form" id="offerteForm">
-                    <form id="contactForm" action="https://formsubmit.co/contact.veloxstudio@gmail.com" method="POST" novalidate>
+                    <form id="contactForm" action="https://formsubmit.co/contact.veloxstudio@gmail.com" method="POST">
                         <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag via website">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="">
+                        <input type="hidden" name="_next" value="https://veloxstudio.nl/offerte.html?verzonden=1">
 
                         <div class="form-divider">Uw gegevens</div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" for="naam">Naam</label>
-                                <input class="form-input" type="text" id="naam" name="Naam" placeholder="Jan de Vries" required>
+                                <input class="form-input" type="text" id="naam" name="Naam" placeholder="Jan de Vries" autocomplete="name" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="bedrijf">Bedrijfsnaam <span>(optioneel)</span></label>
@@ -412,11 +412,11 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label class="form-label" for="email">E-mailadres</label>
-                                <input class="form-input" type="email" id="email" name="Email" placeholder="jan@bedrijf.nl" required>
+                                <input class="form-input" type="email" id="email" name="Email" placeholder="jan@bedrijf.nl" autocomplete="email" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="telefoon">Telefoonnummer <span>(optioneel)</span></label>
-                                <input class="form-input" type="tel" id="telefoon" name="Telefoon" placeholder="06-12345678">
+                                <input class="form-input" type="tel" id="telefoon" name="Telefoon" placeholder="06-12345678" autocomplete="tel">
                             </div>
                         </div>
 
@@ -426,7 +426,7 @@
                             <div class="form-group">
                                 <label class="form-label" for="dienst">Gewenste dienst</label>
                                 <select class="form-select" id="dienst" name="Dienst" required>
-                                    <option value="" disabled>Kies een dienst...</option>
+                                    <option value="" disabled selected>Kies een dienst...</option>
                                     <option value="Nieuwe Website">Nieuwe Website</option>
                                     <option value="Website Redesign">Website Redesign</option>
                                     <option value="Beheer &amp; Onderhoud">Beheer &amp; Onderhoud</option>
@@ -436,7 +436,7 @@
                             <div class="form-group">
                                 <label class="form-label" for="pakket">Gewenst pakket</label>
                                 <select class="form-select" id="pakket" name="Pakket">
-                                    <option value="" disabled>Kies een pakket...</option>
+                                    <option value="" disabled selected>Kies een pakket...</option>
                                     <option value="Standaard — €400">Standaard — €400</option>
                                     <option value="Super — €500">Super — €500</option>
                                     <option value="Premium — €699">Premium — €699</option>

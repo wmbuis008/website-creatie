@@ -34,7 +34,7 @@
 /* Navigatie altijd donker op dienst-pagina's */
 .nav.scrolled {
     background: var(--dark-brown);
-    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(201, 168, 76, 0.2);
 }
 
 /* Terug-link */

@@ -1444,8 +1444,8 @@ body {
     .hero-content .hero-ctas    { justify-content: center; }
     .hero-content .hero-trust   { justify-content: center; }
     .hero-visual { max-width: 480px; margin: 0 auto; }
-    .hero::after { display: none; }
 }
+
 
 @media (max-width: 1024px) {
     :root { --section-pad: 90px; }
@@ -1515,6 +1515,13 @@ body {
     .trust-divider { display: none; }
     .hero-trust { flex-direction: column; gap: 1.5rem; }
     .footer-grid { grid-template-columns: 1fr; }
+}
 
-    /* geen transition-delays — GSAP beheert animaties */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
