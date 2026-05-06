@@ -1,3 +1,6 @@
+# Omgevingsvariabelen (nooit uploaden naar GitHub)
+.env
+
 # Besturingssysteem
 .DS_Store
 Thumbs.db
