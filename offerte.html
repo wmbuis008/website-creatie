@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offerte aanvragen — Velox Studio</title>
     <meta name="description" content="Vraag vrijblijvend een offerte aan bij Velox Studio. Vertel ons over uw project en ontvang binnen 24 uur een persoonlijk voorstel.">
+    <meta property="og:title" content="Offerte aanvragen — Velox Studio">
+    <meta property="og:description" content="Vraag vrijblijvend een offerte aan. Binnen 24 uur een persoonlijk voorstel op maat.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://veloxstudio.nl/offerte.html">
+    <meta property="og:image" content="https://veloxstudio.nl/assets/logo-velox.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -346,7 +351,7 @@
 <body>
 
     <!-- ── NAVIGATIE ── -->
-    <nav class="nav scrolled" id="nav">
+    <nav class="nav scrolled" id="nav" aria-label="Hoofdnavigatie">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
                 <img src="assets/logo-velox.png" alt="Velox Studio" height="48">
@@ -372,6 +377,8 @@
             <a href="index.html#contact" class="btn btn-gold">Gratis gesprek</a>
         </div>
     </nav>
+
+    <main>
 
     <!-- ── HERO ── -->
     <section class="offerte-hero">
@@ -501,6 +508,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- ── FOOTER ── -->
     <footer class="footer">
         <div class="container">
@@ -547,6 +556,14 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script>
         gsap.registerPlugin(ScrollTrigger);
+
+        // Toon succes-state als ?verzonden=1 aanwezig is (na redirect van FormSubmit.co)
+        if (new URLSearchParams(window.location.search).get('verzonden') === '1') {
+            const form = document.getElementById('contactForm');
+            const success = document.getElementById('formSuccess');
+            if (form) form.style.display = 'none';
+            if (success) success.style.display = 'block';
+        }
 
         // Nav scroll state
         const nav = document.getElementById('nav');
