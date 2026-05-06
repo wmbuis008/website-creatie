@@ -112,10 +112,14 @@
 }
 
 .pakket-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 28px;
     background: var(--gold);
     color: var(--dark-base);
     font-size: 0.6rem;
@@ -123,16 +127,14 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     white-space: nowrap;
-    flex-shrink: 0;
 }
 
 .pakket-card:not(.pakket-card--featured) .pakket-badge {
-    visibility: hidden;
-    background: transparent;
+    display: none;
 }
 
 .pakket-header {
-    padding: 2.5rem 2rem 1.5rem;
+    padding: calc(28px + 2.5rem) 2rem 1.5rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
