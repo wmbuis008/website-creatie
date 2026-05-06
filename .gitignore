@@ -1,5 +1,6 @@
 # Omgevingsvariabelen (nooit uploaden naar GitHub)
 .env
+.mcp.json
 
 # Besturingssysteem
 .DS_Store
