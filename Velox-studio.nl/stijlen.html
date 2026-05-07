@@ -60,7 +60,7 @@
 <body>
 
     <!-- ── NAVIGATIE ── -->
-    <nav class="nav scrolled" id="nav" aria-label="Hoofdnavigatie">
+    <nav class="nav nav--always-dark" id="nav" aria-label="Hoofdnavigatie">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
                 <img src="assets/logo-velox.png" alt="Velox Studio" height="48">
@@ -452,9 +452,17 @@
         const burger = document.getElementById('burger');
         const mobileMenu = document.getElementById('mobileMenu');
 
-        burger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+        burger.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            nav.classList.toggle('nav-menu-open', isOpen);
+            burger.setAttribute('aria-label', isOpen ? 'Menu sluiten' : 'Menu openen');
+        });
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                nav.classList.remove('nav-menu-open');
+                burger.setAttribute('aria-label', 'Menu openen');
+            });
         });
 
         gsap.from('.stijlen-header > .container > *', {

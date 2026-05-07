@@ -14,9 +14,12 @@ ScrollTrigger.addEventListener('refresh', () => {
 // ── NAVIGATIE: scroll state ──
 const nav = document.getElementById('nav');
 if (nav) {
-    window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
+    const navAlwaysDark = nav.classList.contains('nav--always-dark');
+    if (!navAlwaysDark) {
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+    }
 }
 
 // ── MOBIEL MENU ──
@@ -25,11 +28,17 @@ const mobileMenu = document.getElementById('mobileMenu');
 
 if (burger && mobileMenu) {
     burger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
+        const isOpen = mobileMenu.classList.toggle('open');
+        nav.classList.toggle('nav-menu-open', isOpen);
+        burger.setAttribute('aria-label', isOpen ? 'Menu sluiten' : 'Menu openen');
     });
 
     mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            nav.classList.remove('nav-menu-open');
+            burger.setAttribute('aria-label', 'Menu openen');
+        });
     });
 }
 

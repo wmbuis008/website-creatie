@@ -376,7 +376,7 @@
 <body>
 
     <!-- ── NAVIGATIE ── -->
-    <nav class="nav scrolled" id="nav" aria-label="Hoofdnavigatie">
+    <nav class="nav nav--always-dark" id="nav" aria-label="Hoofdnavigatie">
         <div class="nav-inner">
             <a href="index.html" class="nav-logo">
                 <img src="assets/logo-velox.png" alt="Velox Studio" height="48">
@@ -483,6 +483,7 @@
                             <textarea class="form-textarea" id="bericht" name="Bericht" placeholder="Vertel iets over uw bedrijf, uw doelgroep, en wat u zoekt in een website..."></textarea>
                         </div>
 
+                        <div class="form-error" id="formError" style="display:none;margin-bottom:1rem;padding:0.75rem 1rem;background:rgba(200,80,80,0.07);border:1px solid rgba(200,80,80,0.2);border-radius:8px;font-size:0.85rem;color:#b85050;line-height:1.5;"></div>
                         <button type="submit" class="btn-offerte-submit">Offerte aanvragen &rarr;</button>
                         <p class="form-disclaimer">Vrijblijvend en kosteloos. Wij reageren binnen 24 uur.</p>
                     </form>
@@ -591,18 +592,23 @@
             if (success) success.style.display = 'block';
         }
 
-        // Nav scroll state
+        // Nav scroll state (nav--always-dark: geen scroll-toggle nodig)
         const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 60);
-        }, { passive: true });
 
         // Burger menu
         const burger = document.getElementById('burger');
         const mobileMenu = document.getElementById('mobileMenu');
-        burger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+        burger.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('open');
+            nav.classList.toggle('nav-menu-open', isOpen);
+            burger.setAttribute('aria-label', isOpen ? 'Menu sluiten' : 'Menu openen');
+        });
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                nav.classList.remove('nav-menu-open');
+                burger.setAttribute('aria-label', 'Menu openen');
+            });
         });
 
         // Hero animatie
@@ -656,21 +662,27 @@
             }
         }
 
-        // Form submit met feedback
+        // Form submit met inline validatie
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             const naam = document.getElementById('naam').value.trim();
             const email = document.getElementById('email').value.trim();
             const dienst = document.getElementById('dienst').value;
+            const errorEl = document.getElementById('formError');
 
-            if (!naam || !email || !dienst) {
+            const missing = [];
+            if (!naam) missing.push('naam');
+            if (!email) missing.push('e-mailadres');
+            if (!dienst) missing.push('gewenste dienst');
+
+            if (missing.length > 0) {
                 e.preventDefault();
-                const missing = [];
-                if (!naam) missing.push('naam');
-                if (!email) missing.push('e-mailadres');
-                if (!dienst) missing.push('gewenste dienst');
-                alert('Vul a.u.b. de verplichte velden in: ' + missing.join(', ') + '.');
+                errorEl.textContent = 'Vul de volgende verplichte velden in: ' + missing.join(', ') + '.';
+                errorEl.style.display = 'block';
+                errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }
+
+            errorEl.style.display = 'none';
 
             // FormSubmit.co verstuurt het formulier; toon succes na korte vertraging
             setTimeout(() => {

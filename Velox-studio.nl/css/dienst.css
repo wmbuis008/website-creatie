@@ -32,7 +32,8 @@
 }
 
 /* Navigatie altijd donker op dienst-pagina's */
-.nav.scrolled {
+.nav.scrolled,
+.nav.nav--always-dark {
     background: var(--dark-brown);
     box-shadow: 0 2px 24px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(201, 168, 76, 0.2);
 }
@@ -55,6 +56,7 @@
 /* Hero sectie */
 .dienst-hero {
     min-height: 65vh;
+    min-height: 65dvh;
     background: var(--dark-base);
     display: flex;
     align-items: center;

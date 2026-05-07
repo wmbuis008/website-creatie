@@ -91,6 +91,11 @@ body {
     transform: translateY(-2px);
 }
 
+.btn:active {
+    transform: translateY(1px) scale(0.98);
+    transition-duration: 0.08s;
+}
+
 .btn-outline {
     background: transparent;
     color: rgba(250, 245, 240, 0.8);
@@ -189,6 +194,18 @@ body {
     padding: 0 2rem;
 }
 
+/* Nav altijd donker (op dienst-pagina's) */
+.nav--always-dark {
+    background: #1E0F06;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(201, 168, 76, 0.2);
+}
+
+/* Mobiel menu open: nav krijgt achtergrond ook zonder scroll */
+.nav.nav-menu-open {
+    background: #1E0F06;
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(201, 168, 76, 0.2);
+}
+
 .nav-inner {
     max-width: var(--container);
     margin: 0 auto;
@@ -280,6 +297,7 @@ body {
 /* ── HERO ── */
 .hero {
     min-height: 100vh;
+    min-height: 100dvh;
     background: linear-gradient(160deg, #0C0703 0%, #1C0F07 60%, #0C0703 100%);
     display: flex;
     align-items: center;
@@ -1299,7 +1317,7 @@ body {
 }
 
 .faq-item.open .faq-answer {
-    max-height: 280px;
+    max-height: 700px;
 }
 
 /* ── CTA / CONTACT ── */
@@ -1454,6 +1472,10 @@ body {
         grid-template-columns: 1fr 1fr;
     }
 
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
@@ -1515,6 +1537,16 @@ body {
     .trust-divider { display: none; }
     .hero-trust { flex-direction: column; gap: 1.5rem; }
     .footer-grid { grid-template-columns: 1fr; }
+
+    /* CTA knoppen met lange tekst (email) op kleine schermen */
+    .cta-actions .btn {
+        font-size: 0.82rem;
+        padding: 0.9rem 1.25rem;
+        word-break: break-all;
+        text-align: center;
+        width: 100%;
+        max-width: 320px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
