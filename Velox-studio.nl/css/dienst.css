@@ -259,6 +259,16 @@
 }
 
 /* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+    .dienst-features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .dienst-signals-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .dienst-features-grid,
     .dienst-signals-grid {

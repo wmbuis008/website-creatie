@@ -45,6 +45,13 @@
 
 html { scroll-behavior: smooth; }
 
+/* Focus-visible: zichtbaar voor toetsenbordgebruikers, onzichtbaar bij muisklik */
+:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 body {
     font-family: var(--font-sans);
     color: var(--text-dark);
